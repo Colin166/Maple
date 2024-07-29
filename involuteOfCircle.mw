@@ -1,0 +1,9 @@
+restart;
+with(plots);
+x := cos(t) + t*sin(t);
+y := sin(t) - t*cos(t);
+v := r*cos(t);
+w := r*sin(t);
+r := 1;
+circle := plot([v, w, t = 0 .. 2*Pi]);
+invol := animate(plot, [[x, y, t = 0 .. s]], s = 0 .. 2*Pi, color = blue, frames = 50, background = circle);
